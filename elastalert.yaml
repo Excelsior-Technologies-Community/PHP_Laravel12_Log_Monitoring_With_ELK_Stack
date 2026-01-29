@@ -1,0 +1,13 @@
+name: Laravel Error Alert
+type: frequency
+index: laravel-logs-*
+num_events: 5
+timeframe:
+  minutes: 5
+filter:
+- term:
+    level.keyword: "ERROR"
+alert:
+- "email"
+email:
+- "admin@example.com"
